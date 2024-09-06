@@ -1,0 +1,17 @@
+<div class="container mt-5" *ngIf="restaurant">
+    <h2 class="text-center mb-4">{{ restaurant.name }}</h2>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Description</h5>
+        <p class="card-text">{{ restaurant.description }}</p>
+  
+        <h5 class="card-title">Location</h5>
+        <p class="card-text">{{ restaurant.location }}</p>
+        <div class="text-center">
+          <a routerLink="/restaurants/edit/{{ restaurant.id }}" class="btn btn-primary mt-3">Edit</a>
+          <a routerLink="/restaurants" class="btn btn-secondary mt-3 ms-2">Back to List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

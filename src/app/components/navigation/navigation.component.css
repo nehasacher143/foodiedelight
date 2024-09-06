@@ -1,0 +1,11 @@
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+}
+
+.navbar-collapse.collapse {
+  flex-grow: revert;
+}

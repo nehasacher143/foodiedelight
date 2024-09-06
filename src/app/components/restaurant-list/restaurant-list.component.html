@@ -1,0 +1,27 @@
+<h2 class="text-center mb-4">List of Restaurants</h2>
+<div class="table-responsive mt-5">
+	<table class="table table-bordered mx-auto" style="width: 1000px">
+		<thead class="thead-dark text-center">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Location</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let restaurant of restaurants">
+				<td>{{ restaurant.name }}</td>
+				<td>{{ restaurant.description }}</td>
+				<td>{{ restaurant.location }}</td>
+				<td>
+					<div class="d-flex">
+						<a [routerLink]="['/restaurants', restaurant.id]" class="btn btn-info btn-sm">View</a>
+						<a [routerLink]="['/restaurants/edit', restaurant.id]" class="btn btn-warning btn-sm mx-2">Edit</a>
+						<button class="btn btn-danger btn-sm" (click)="deleteRestaurant(restaurant.id)">Delete</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
